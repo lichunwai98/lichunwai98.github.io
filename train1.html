@@ -18,7 +18,7 @@
             /* Define a method that takes an input CAPTCHA and performs a set of image operations to remove noise. */
             preprocess: function(img) {
                 // Each pixel lighter than the grayscale threshold of 220 is turned white and everything darker is turned black.
-                img.binarize(220);
+                img.binarize(250);
                 
                 // Output the work-in-progress image to an element with a specific ID so we can see the effect of our image operations.
                 img.debugImage("debugPreprocessed");
