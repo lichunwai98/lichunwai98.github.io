@@ -26,7 +26,7 @@
                 // Flood-fill every blob (a grouping of similarly colored pixels) with a unique color. 
                 // This is an important last step of the segmentation phase since the segmenter will create a separate character
                 // image for each unique color in the image. If all the characters are black then the segmenter will only find one character.
-                img.colorRegions(50);
+                img.colorRegions(40);
                 
                 // Once again output the image to a div or something so we see the effect of colorization.
                 img.debugImage("debugPreprocessed");
