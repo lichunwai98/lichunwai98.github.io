@@ -27,7 +27,7 @@
                 // Flood-fill every blob (a grouping of similarly colored pixels) with a unique color. 
                 // This is an important last step of the segmentation phase since the segmenter will create a separate character
                 // image for each unique color in the image. If all the characters are black then the segmenter will only find one character.
-                img.colorRegions(40 , true);
+                img.colorRegions(40 , true,1);
                 
                 // Once again output the image to a div or something so we see the effect of colorization.
                 img.debugImage("debugPreprocessed");
@@ -57,7 +57,19 @@
         // image via the file:// protocol which is a security concern. You either need to set up a local server and use http:// or
         // find some way to disable that security setting during development (not recommended).
         cbl.train("29V4.png");
-
+        cbl.train("66LS.png");
+        cbl.train("67YZ.png");
+        cbl.train("6DGA.png");
+        cbl.train("B275.png");
+        cbl.train("BPPR.png");
+        cbl.train("C7G3.png");
+        cbl.train("E25G.png");
+        cbl.train("EJWH.png");
+        cbl.train("FA8P.png");
+        cbl.train("J45T.png");
+        cbl.train("MTUW.png");
+        cbl.train("MU96.png");
+        cbl.train("NKGX.png");
         
         var saveModel = function() {
             // Download the model after training!
