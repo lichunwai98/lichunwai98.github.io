@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>你好，GitHub</title>
-  </head>
-  <body>
-    <h1>hello world</h1>
-  </body>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狗狗每日營養計算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>狗狗每日營養計算器</h1>
+        
+        <!-- 第一部分：計算每日所需熱量 -->
+        <section id="calorie-calc">
+            <h2>第一部分：計算每日所需熱量</h2>
+            <label>狗狗體重 (kg):</label>
+            <input type="number" id="weight" min="1" required>
+            
+            <label>狗狗品種:</label>
+            <select id="breed">
+                <option value="small">小型 (<10kg)</option>
+                <option value="medium">中型 (10-25kg)</option>
+                <option value="large">大型 (>25kg)</option>
+            </select>
+            
+            <label>每日散步時間 (分鐘):</label>
+            <input type="number" id="walk-time" min="0" required>
+            
+            <button onclick="calculateMER()">計算所需熱量</button>
+            <p id="mer-result"></p>
+        </section>
+        
+        <!-- 第二部分：食物營養計算 -->
+        <section id="food-calc">
+            <h2>第二部分：計算食物營養</h2>
+            <div id="food-items"></div>
+            <button onclick="addFoodItem()">添加食物</button>
+            <button onclick="calculateNutrition()">計算總營養</button>
+            <p id="nutrition-result"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
