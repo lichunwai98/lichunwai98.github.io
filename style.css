@@ -1,1 +1,94 @@
-test
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+    margin: 0; 
+    padding: 20px; 
+}
+
+.container { 
+    max-width: 800px; 
+    margin: auto; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+
+h1, h2 { 
+    text-align: center; 
+}
+
+section { 
+    margin-bottom: 30px; 
+}
+
+label { 
+    display: block; 
+    margin: 10px 0 5px; 
+}
+
+input, select { 
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; /* 確保 padding 不影響寬度 */
+}
+
+button { 
+    padding: 10px; 
+    background: #4CAF50; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+button:hover { 
+    background: #45a049; 
+}
+
+p { 
+    font-weight: bold; 
+}
+
+.food-item { 
+    margin-bottom: 15px; 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* 減少邊距 */
+    }
+
+    .container {
+        padding: 15px; /* 調整容器邊距 */
+        max-width: 100%; /* 全寬 */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* 縮小標題 */
+    }
+
+    input, select {
+        font-size: 1em; /* 確保文字可讀 */
+    }
+
+    button {
+        width: 100%; /* 按鈕全寬，便於觸摸 */
+        margin: 5px 0; /* 垂直堆疊 */
+    }
+
+    .food-item {
+        padding: 8px; /* 縮小內邊距 */
+    }
+
+    /* 使用 flex 確保按鈕和元素堆疊 */
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
